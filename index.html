@@ -1,0 +1,155 @@
+<!--First Web page-->
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Web Page</title>
+    <style>
+        h2 + p {
+           color: red;
+           font-weight: bold;
+       }
+       .container > p {
+           color: blue;
+           font-style: italic;
+       }
+       .container > h2 + p {
+           color: green;
+           font-size: larger;
+       }
+       [data-custom] {
+           border: 2px solid blue;
+           padding: 10px;
+           margin: 5px;
+       }
+   </style>
+</head>
+<body>
+    <h1>My First Web Page</h1>
+    <h2>This is the second heading</h2>
+    <p>Meta tag is an empty tag.We write meta tag inside head tag. The purpose of meta tag is to provide the 
+        information about the page to the browser by which it is associated with.It sustains the information such 
+        as charset, viewport measurement ,author names,description etc .Attributes of meta tag is name and content.
+    </p>
+    <img src="flower.jpg">
+    <p>Image tag is also an empty tag .When we say a tag is empty that means it doesnt have closing tag.</p>
+    <strong>
+        What is MDN?
+    </strong>
+    <em>MDN is Mozilla Developer Network .Its a web platform consist of documentation upon web technologies and 
+        not only web technologies but all other technologies such as c ,c++,python etc.Its a very rich resource
+        for learning and revision for developers as it has information without zero error.
+    </em>
+    <h3>My Second Web page</h3>
+        <img src="flower.jpg" alt="flower image">
+        <figcaption>A Beautiful Flower</figcaption>
+        <strong>Why do we write doctype html in our file?</strong>
+        <p>
+            The doctype <a href="https://www.google.com">declaration</a> is the instruction to the web browser about in which version the html pahe is 
+            written in .Back in version 4 of html the developer has to write little bit more about the version in the 
+            very first line of his code but now only by writting that line its understandable by the browser.
+        </p>
+        <ul style="text-decoration:underline;"> Particulars</ul>
+            <ul>Books</ul>
+            <ul>Maths book
+            <li>Maths Part1</li>
+            <li>MAths Part2</li>
+            </ul>
+            <li>Science Book</li>
+            <ul>Social Science Book
+                <li>History</li>
+                <li>Civics</li>
+                <li>Geography</li>
+            </ul>
+            <li>Music Book</li>
+            <ul>Dresses</ul>
+            <li>Jeans</li>
+            <li>Cargo Pants</li>
+            <li>Frocks</li>
+            <ul>Dishes</ul>
+            <li>Kadhai Chicken</li>
+            <li>Palaak Paneer</li>
+            <p>Here because div is a block level element its taking the whole space horizontally</p>
+    <div style="background-color: black;">
+        <figure>
+            <img src="flower.jpg">
+            <figcaption style="color:bisque">Image of a flower</figcaption>
+        </figure>  
+    </div>
+    <p>Here I had used hexadecimal color picker</p>
+    <div style="background-color: #4f78ab;">
+        <figure>
+            <img src="dog.jpg">
+            <figcaption style="color:bisque">Image of a Dog</figcaption>
+        </figure>  
+    </div>
+    <p>Here I had used rgb style</p>
+    <div style="background-color:rgb(0 147 255);">
+        <figure>
+            <img src="dog.jpg">
+            <figcaption style="color:bisque">Image of a dog</figcaption>
+        </figure>  
+    </div>
+    <div style="background-color:rgb(0 147 255);">
+        <figure>
+            <img src="dog.jpg">
+            <figcaption style="color:bisque;">Image of a dog</figcaption>
+        </figure>  
+    </div>
+    <div style="background-color:rgb(0 50 255);">
+        <figure>
+            <img src="dog.jpg">
+            <figcaption style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">Image of a dog</figcaption>
+        </figure>  
+    </div>
+<!--another example on color properties and text properties-->
+    <div style="background-color:#4d3d17;height:100px;width:100px;">
+    </div>
+    <div style="background-color:#5b6e42;height:100px;width:100px;">
+    </div>
+    <div style="background-color:#42696e;height:100px;width:100px;">
+    </div>
+    <p> Another example of color picker </p>
+    <div style="background-color:#64426e;height:100px;width:100px;">
+    </div>
+    <!--Font examples-->
+    <p> font family examples</p>
+    <h3 style="font-family:cursive;"> This is an example of font styling (cursive)</h3>
+    <h3 style="font-family:Arial, Helvetica, sans-serif;"> This is an example of font styling(Arial)</h3>
+    <h3 style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">This is an example of font styling(Lucida)</h3>
+    <h3 style="font-weight: 500px;"> This is an example of font weight 500 px</h3>
+
+    <h2>Heading 1</h2>
+    <p>This paragraph is immediately after Heading 1 and will be styled.</p>
+    <h2>Heading 2</h2>
+    <div>
+        <p>This paragraph is not immediately after Heading 2 and will not be styled.</p>
+    </div>
+    <p>This paragraph is also not immediately after any heading and will not be styled.</p>
+    <p>The adjacent sibling selector (+) is used to select an element that is immediately preceded by a specified sibling element.</p>
+    <p>Direct descendent selector - is used to select elements that are direct children of a specified parent element.</p>
+    <div class="container">
+        <p>This paragraph is a direct child of the container and will be styled.</p>
+        <div>
+            <p>This paragraph is inside another div and will not be styled.</p>
+        </div>
+    </div>
+    <p>This paragraph is outside the container and will not be styled.</p>
+  <!--Combination of both selector-->
+  <div class="container">
+    <h2>Heading 1</h2>
+    <p>This paragraph is a direct child of the container and immediately follows an h2, so it will be styled.</p>
+    <h2>Heading 2</h2>
+    <div>
+        <p>This paragraph is not a direct child of the container, so it will not be styled.</p>
+    </div>
+</div>
+<p>This paragraph is outside the container and will not be styled.</p>
+<strong>Attribute Selector</strong><p>They provide a powerful way to apply styles to elements that have specific attributes or attribute values.
+</p>
+<div data-custom="value1">This div has a data-custom attribute.</div>
+    <p data-custom="value2">This paragraph has a data-custom attribute.</p>
+    <span>This span does not have a data-custom attribute.</span>
+</body>
+</html>

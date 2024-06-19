@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Example</title>
+    <style>
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            height: 300px;
+            background-color: lightgrey;
+            padding: 20px;
+        }
+        .item {
+            background-color: lightblue;
+            padding: 20px;
+            margin: 10px;
+            border: 2px solid darkblue;
+            flex-grow: 1;
+            flex-shrink: 1;
+            flex-basis: 100px;
+        }
+        .container2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+            background-color: lightgrey;
+            padding: 20px;
+        }
+        .item2{
+            background-color: lightblue;
+            padding: 20px;
+            border: 2px solid darkblue;
+        }
+        .container3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+            background-color: lightgrey;
+            padding: 20px;
+        }
+        .item3 {
+            background-color: lightblue;
+            padding: 20px;
+            border: 2px solid darkblue;
+        }
+        @media (max-width: 600px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+        }
+        .box5 {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid darkblue;
+            margin: 10px;
+        }
+        .box6
+             {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid darkblue;
+            margin: 10px;
+            position: relative;
+            top: 20px;
+            left: 30px;
+        
+        }
+        .containerabs {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            background-color: lightgrey;
+            margin: 10px;
+        }
+        .boxabs {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid darkblue;
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        .boxfixed {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid darkblue;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+        }
+        .boxsty {
+            width: 100px;
+            height: 100px;
+            background-color: lightblue;
+            border: 2px solid darkblue;
+            position: sticky;
+            top: 20px;
+            margin: 10px;
+        }
+        .containersty {
+            height: 200px;
+            background-color: lightgrey;
+        }
+    </style>
+</head>
+<body>
+    <p>Flex property example</p>
+    <p> It provides an efficient way to lay out, align, and distribute space among items in a container, even when their size is unknown or dynamic.</p>
+    <p> display flex makes the container flex container and its items flex.</p>
+    <p>The align items property makes the items align at main axis i.e horizontal</p>
+    <p>flex-grow: 1; allows items to grow to fill the available space.</p>
+     <p>  flex-shrink: 1; allows items to shrink if necessary.</p>
+      <p>  flex-basis: 100px; sets the initial size of the items.</p>
+    <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+    </div>
+    <p>Grid Layout is a powerful layout system designed for two-dimensional layout of items on a webpage. It enables you to create complex and responsive layouts with ease. </p>
+    <div class="container2">
+        <div class="item2">Item1</div>
+        <div class="item2">Item2</div>
+        <div class="item2">Item3</div>
+        <div class="item2">Item4</div>
+    </div>
+    <p>responsive web designs is crucial for ensuring that your website looks good on various devices and screen sizes. CSS Grid and Flexbox are powerful tools for achieving responsiveness.</p>
+    <div class="container3">
+        <div class="item3">Item1</div>
+        <div class="item3">Item2</div>
+        <div class="item3">Item3</div>
+        <div class="item3">Item4</div> 
+    </div>
+    <p>CSS positioning allows you to control the layout and placement of elements in a web page. The main positioning properties include static, relative, absolute, fixed, and sticky</p>
+    <p>Static Position</p>
+    <p>Static positioning is the default positioning for all elements. Elements are positioned according to the normal document flow.</p>
+    <div class="box5">Static Box 1</div>
+    <div class="box5">Static Box 2</div>
+    <p>Relative Position</p>
+    <p>Relative positioning positions the element relative to its original position in the document flow.</p>
+    <div class="box6">Static Box 1</div>
+    <div class="box6">Static Box 2</div>
+    <p>Absolute Position</p>
+    <p>Absolute positioning positions the element relative to the nearest positioned ancestor or the initial containing block if no positioned ancestor exists.</p>
+    <div class="containerabs">
+        <div class="boxabs">Absolute Box</div>
+    </div>
+    <p>Fixed positioning positions the element relative to the viewport, and it remains fixed during scrolling.</p>
+    <div class="boxfixed">Fixed Box</div>
+    <div style="height: 2000px;">Scroll to see the fixed box stay in place.</div>
+    <p> Sticky positioning toggles between relative and fixed positioning, depending on the user's scroll position. It remains relative until a specified point is reached, then it behaves like fixed positioning.
+    </p>
+    <div class="containersty">
+        <div class="boxsty">Sticky Box</div>
+        <div style="height: 2000px;">Scroll to see the sticky box in action.</div>
+    </div>
+</body>
+</html>
